@@ -7,6 +7,10 @@ use App\Model\PagosRealizado;
 use App\Model\Prestamo;
 class Cliente extends Model
 {
+    //en ocaciones laravel no manda el mismo nombre de la tabla, para especificar se hace lo siguiente
+    public $table = "TblCliente";
+    protected $primaryKey = 'IdCliente';
+
     protected $fillable = [
         'nombre','telefono','direccion',
     ];

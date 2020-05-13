@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use App\Cliente;
 class PagosRealizado extends Model
 {
+    public $table = "TblPagosRealizado";
+    protected $primaryKey = 'IdPagosRealizado';
     protected $fillable = [
         'IdCliente','NumeroPago','Cantidad',
     ];
