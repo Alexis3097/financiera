@@ -13,20 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/{any}','SinglePageController@index')->where('any', ',*');
 
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/Clientes', 'ClienteController@index')->name('Cliente.index');
-Route::get('/Clientes/new', 'ClienteController@Create')->name('Cliente.create');
-Route::post('/Clientes', 'ClienteController@store')->name('Cliente.store');
-Route::delete('/Clientes/{id}', 'ClienteController@destroy')->name('Cliente.destroy');
