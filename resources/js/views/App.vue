@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-navigation-drawer app color="primary" temporary v-model="drawerOpen">
+        <v-navigation-drawer app color="primary" absolute v-model="drawerOpen" dark>
             <navigation></navigation>
         </v-navigation-drawer>
         <v-app-bar app color="yellow" >
@@ -11,9 +11,6 @@
         </v-app-bar>
         <v-content>
             <v-container fluid>
-                <router-link tag="li" to="/">Home</router-link>
-                <router-link tag="li" to="/about">About</router-link>
-                
                 <router-view></router-view>
             </v-container>
         </v-content>
@@ -28,7 +25,7 @@ export default {
         'navigation':Navigation
     },
     data: ()=> ({
-        drawerOpen: false
+        drawerOpen: true
     })
 }
 </script>

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import Home from '@/js/components/Home';
 import About from '@/js/components/About';
+import Login from '@/js/pages/LoginPage';
 
 Vue.use(VueRouter);
 const router = new VueRouter({
@@ -11,12 +12,16 @@ const router = new VueRouter({
         {
             path :'/',
             name: 'home',
-            component: Home
+            component: Login
         },
         {
-            path :'/About',
-            name: 'About',
+            path :'/about',
+            name: 'about',
             component: About
+        },
+        {
+            path :'/login',
+            component: Login
         }
     ]
 })
